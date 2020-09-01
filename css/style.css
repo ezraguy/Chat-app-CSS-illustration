@@ -25,6 +25,7 @@ html, body {
 }
 
 .main .text .title {
+  font-weight: 700;
   font-size: 20pt;
   color: #3e2753;
   margin-bottom: 10px;
