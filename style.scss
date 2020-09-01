@@ -1,0 +1,332 @@
+
+   html,body{
+       width: 100%;
+       
+       margin: 0;
+       overflow-x: hidden;
+   }
+   
+   .main{
+      margin-right: 200px !important;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-family: 'Rubik', sans-serif;
+       
+       .text{
+        margin-bottom: 150px;
+        margin-left: 7%;
+         .title{
+            font-size: 20pt;
+            color: hsl(271, 36%, 24%);
+            margin-bottom: 10px;
+         }
+         .desc{
+             line-height: 25px;
+             max-width: 450px;
+             font-size: 15px;
+             color: hsl(270, 7%, 64%);
+         }
+       }
+    .wrapper{
+       margin-bottom: 150px;
+       justify-content: center;
+        width: 330px;
+        height: 620px;
+        border-radius:30px;
+        background-color: white;
+        box-shadow:  0 0 15px rgb(46, 46, 46);
+    
+        .shape-1{
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left:-100px;
+            background: linear-gradient(to bottom,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+            height: 80%;
+            width: 30%;
+            border-bottom-right-radius: 400px;
+            border-bottom-left-radius: 400px;
+        }
+        .shape-2{
+            z-index: -1;
+            position: fixed;
+            bottom: 0;
+            right: -100px;
+            background: rgba(128, 128, 128, 0.057);
+            height: 80%;
+            width: 30%;
+            border-top-right-radius: 400px;
+            border-top-left-radius: 400px;
+        }
+    
+       .phone-wrapper{
+           padding: 10px;
+           margin-bottom: 200px !important;
+    
+        .phone{
+            position: relative;
+            width: 310px;
+            border-radius:30px;
+            height: 600px;
+            background-color: white;
+            overflow: hidden;
+    
+            .notch{
+                position: absolute;
+                background-color: white;
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                border-radius: 0 0 20px 20px;
+                z-index: 11;
+                height: 22px;
+            }
+    
+            .user-name{
+                border-radius: 20px 20px 5px 5px;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                z-index: 10;
+                background: linear-gradient(to left,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+                padding-top: 40px;
+                padding-bottom: 10px;
+               
+                .content{
+                    .row{
+                      
+                        display: flex;
+                        flex-direction: row;
+                        svg{
+                            width: 14px;
+                            fill: white;
+                            margin-left: 5px;
+                            margin-top: 4px;
+                            cursor: pointer;
+                        }
+                        .profile-pic{
+                            margin-left: 15px;
+                            border: 1px white solid;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 360%;
+                        }
+    
+                        .name{
+                            padding-left: 10px;
+                            color: whitesmoke;
+                        }
+    
+                        .sub-title{
+                          font-size: 9pt;
+                          color:   hsl(276, 100%, 81%);
+                        }
+                    }
+    
+                    .menu{
+                        position: absolute;
+                        right: 10px;
+                        fill: white;
+    
+                        svg{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .messages{
+                display: flex;
+                flex-direction: column;
+               height: 508px ;
+                width: 100%;
+                background-color: hsl(270, 20%, 96%);
+                padding-top: 10px;
+                .message-left{
+                    align-self: flex-start;
+                    border-radius: 20px 20px 20px 5px;
+                    color: hsl(276, 55%, 52%);
+                    background-color:  hsla(276, 55%, 52%, 0.125);
+                    font-size: 11px;
+                    max-width: 150px;
+                    padding: 10px;
+                    line-height: 15px;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                }
+    
+                .message-right{
+                    align-self: flex-end;
+                    border-radius: 20px 20px 5px 20px;
+                    color:hsl(271, 15%, 43%);
+                    background-color: white;
+                    font-size: 11px;
+                    max-width: 250px;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    margin-right: 12px;
+                  
+                }
+    
+                .img-message-right{
+                    align-self: flex-end;
+                    position: relative;
+                    float: right;               
+                    color:black;
+                    width: 150px;
+                    padding: 10px;
+                    margin-top: 5px;
+                    
+                      img{
+                        display: inline-block ;
+                        border-radius: 10px;
+                        margin-left: 5px; 
+                        width: 40px;
+                        height: 40px;
+                      }
+                       
+    
+                    
+                }
+    
+                .offer-msg{
+                    @extend .message-left ;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    color: white;
+                    min-width:200px;
+                    background: linear-gradient(to right,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    
+                    span{
+                        margin-left: 20px;
+                        color: whitesmoke
+                    }
+                    .circle{
+                        margin: 0;
+                        display: inline-block;
+                        background-color: transparent;  
+                        width: 20px;
+                        height: 20px;
+                        border: white 1px solid ;    
+                        border-radius: 50%;
+                    }
+                    .price{
+                      margin-left: auto;
+                        font-weight: bold;
+                        font-size: 14px;
+                      
+                    }
+    
+                }
+            }
+    
+            .input{
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+                display: flex;
+                justify-content: center;
+                
+                input{
+                    position: relative;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: none;
+                    padding-left: 15px;
+                    width: 100%;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    color:  hsl(206, 6%, 79%);
+                    &:focus{
+                       
+                        outline: none;
+                    }
+                }
+                button{
+                    position: absolute;
+                    right: 15px;
+                    top: 7px;
+                    color: white;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    background-color:hsl(271, 36%, 24%);
+                    
+                    svg{
+                        cursor: pointer;
+                            padding-right: 10px;
+                            width: 14px;
+                            fill: white;
+                          
+                    }
+                }
+            }
+        }
+    
+    
+    
+       
+       }
+    }
+   }
+
+.attribution {
+    
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+  
+     a{
+        color: hsl(228, 45%, 44%);
+     }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        .wrapper{
+            margin-bottom: 0px ;
+            margin-top: 100px;
+            
+        }
+
+        .text{
+            margin-right:20px ;
+            margin-left:20px ;
+            text-align: center;
+            margin-bottom: 20px;
+
+            
+        }
+
+        .shape-1 ,.shape-2 {
+            height: 60% !important;
+            width:50% !important;
+        }
+    }
+        
+        .attribution{
+            position: relative;
+           margin-top: 60px;
+        }
+    }
+  
+
+  
